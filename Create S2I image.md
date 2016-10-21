@@ -84,7 +84,7 @@ Run `ls s2i-lighttpd` and observe the following folder structure
 	* `usage` – script responsible for printing the usage of the builder image
 
 
-### Update Assemble and Run Scripts
+### Step 3 Update Assemble and Run Scripts
 
 Lighttpd is a httpd server. The only thing we need to do during assembly is to copy the source files into a directory from which Lighttpd will serve. 
 
@@ -156,7 +156,7 @@ chmod 755 .s2i/bin/*
 
 Now we have the S2I scripts ready.
 
-### Step 3 Add Lighttpd Configuration File
+### Step 4 Add Lighttpd Configuration File
 
 Lighttpd requires a configuration file to run this server. Let us add this file `s2i-lighttpd/etc/lighttpd.conf` with minimal content for Lighttpd to run. 
 
@@ -186,7 +186,7 @@ mimetype.assign = (
 
 
 
-### Step 4 Edit the Container Image Specification
+### Step 5 Edit the Container Image Specification
 
 Modify the `Dockerfile` for the following changes: 
  
@@ -255,7 +255,7 @@ CMD ["usage"]
 
 
 
-### Step 5 Build the S2I Builder Image
+### Step 6 Build the S2I Builder Image
 
 Change to `s2i-lighttpd` directory and run
 
@@ -272,7 +272,7 @@ docker images
 ```
 to verify the existence of the `lighttpd-rhel` image on your rhel box.
 
-### Step 6 Testing the S2I Image
+### Step 7 Testing the S2I Image
 
 Now it’s time to test our builder image. Let's create an index.html file in the s2i-lighttpd/test/test-app directory with the following contents:
 
@@ -305,7 +305,7 @@ Now test the `sample-app` image by running
 docker run -p 8080:8080 sample-app 
 ```
 
-### Step 7 Login to OpenShift registry
+### Step 8 Login to OpenShift registry
 
 Now we are ready to test this on OpenShift Cluster. 
 
@@ -371,7 +371,7 @@ docker tag lighttpd-rhel <registry url>/s2itest-<username>/lighttpd-rhel
 Run `docker images` to verify the newly tagged image. Make a note of the complete image name (As an example this image name would be like `registry.apps.devday.ocpcloud.com/s2itest-veer/lighttpd-rhel:latest`)
 
 
-### Step 8 Create ImageStream 
+### Step 9 Create ImageStream 
 
 Create a json ImageStream file with the following content. Edit to make sure your image name matches with what you noted in the previous step. Let us name it as `lighttpd-rhel-is.json`.
 
@@ -417,7 +417,7 @@ oc get is -n s2itest-UserName
 and you should see an image with name `lighttpd-rhel`. However, the tags should be empty since we did not push the docker image into the registry yet.
 
 
-### Step 9 Pushing image to Registry
+### Step 10 Pushing image to Registry
 
 ow push the docker image into the docker registry on your openshift cluster. **Substitute the username and registry-url with appropriate values**
 
@@ -466,7 +466,7 @@ status:
 
 Note that tags at the end that refer to the docker image id. If you don't see that the image stream won't work.
 
-### Step 10 Test deploying an application
+### Step 11 Test deploying an application
 
 Now it is time to test your `lighttpd-rhel` S2I image from the Web Console.
 
