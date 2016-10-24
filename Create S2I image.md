@@ -6,6 +6,7 @@ In this lab you will learn to created S2I (Source to Image) builder images using
 ### Prerequisites
 * This lab requires a RHEL box as we will be using RHEL base image in this use case.
 * This rhel box should be subscribed to RedHat Network.
+* Make sure that docker is installed and is running on this RHEL box. (yum install docker -y)
 
 ### Step 1 Download the S2I tools 
 
