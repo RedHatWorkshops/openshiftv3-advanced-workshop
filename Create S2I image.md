@@ -12,7 +12,7 @@ In this lab you will learn to created S2I (Source to Image) builder images using
 Download latest linux version from [https://github.com/openshift/source-to-image/releases/]()
 
 ```
-wget source-to-image-v1.1.1-724c0dd-linux-386.tar.gz
+wget https://github.com/openshift/source-to-image/releases/download/v1.1.2/source-to-image-v1.1.2-5732fdd-linux-386.tar.gz
 
 tar -xvzf source-to-image-v1.1.1-724c0dd-linux-386.tar.gz
 ```
