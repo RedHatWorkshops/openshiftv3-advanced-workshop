@@ -369,6 +369,8 @@ as an example
 docker login -u veer -e veer@example.com -p I6PMthJN-BjK7jsPNpeQ9vIZlXxOoQfjaMOYqFOaexU registry.apps.devday.ocpcloud.com
 ```
 
+**As an alternative** you can also set the docker registry as `insecure`, in which case the `ca.crt` wouldn't be required. For this edit the file `/etc/sysconfig/docker` and add the line  `INSECURE_REGISTRY='--insecure-registry <registry name>'`. Then restart docker service by running `systemctl restart docker`.
+
 Now tag your `lighttpd-rhel` docker image to be able to push into the registry. **Substitute appropriate values below**
 
 ```
