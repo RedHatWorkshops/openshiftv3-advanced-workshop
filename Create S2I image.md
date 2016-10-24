@@ -379,7 +379,7 @@ Run `docker images` to verify the newly tagged image. Make a note of the complet
 
 ### Step 9 Create ImageStream 
 
-Create a json ImageStream file with the following content. Edit to make sure your image name matches with what you noted in the previous step. Let us name it as `lighttpd-rhel-is.json`.
+Create a json ImageStream file with the following content. Edit to make sure your image name matches with what you noted in the previous step. Let us name it as `lighttpd-rhel-is.json`. Also make sure that the `namespace` is pointing to your project name (`s2itest-UserName`)
 
 ```
 {
