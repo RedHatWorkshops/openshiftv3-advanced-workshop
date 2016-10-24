@@ -363,6 +363,11 @@ Login to the docker registry using oauth-token from the last step, your username
 ```
 docker login -u <username> -e <email> -p <oauth-token> <registry url>
 ```
+as an example 
+
+```
+docker login -u veer -e veer@example.com -p I6PMthJN-BjK7jsPNpeQ9vIZlXxOoQfjaMOYqFOaexU registry.apps.devday.ocpcloud.com
+```
 
 Now tag your `lighttpd-rhel` docker image to be able to push into the registry. **Substitute appropriate values below**
 
