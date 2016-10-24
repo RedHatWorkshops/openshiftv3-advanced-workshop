@@ -14,7 +14,7 @@ Download latest linux version from [https://github.com/openshift/source-to-image
 ```
 wget https://github.com/openshift/source-to-image/releases/download/v1.1.2/source-to-image-v1.1.2-5732fdd-linux-386.tar.gz
 
-tar -xvzf source-to-image-v1.1.1-724c0dd-linux-386.tar.gz
+tar -xvzf source-to-image-v1.1.2-5732fdd-linux-386.tar.gz
 ```
 
 It will have two executables s2i and sti
