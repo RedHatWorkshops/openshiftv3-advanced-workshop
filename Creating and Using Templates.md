@@ -623,7 +623,7 @@ To declare these parameters in a template, we will add the parameters section as
             "name": "MYSQL_USER",
             "displayName": "Database User",
             "generate": "expression",
-            "from": "[a-zA-Z0-9]{40}"
+            "from": "[a-zA-Z0-9]{16}"
         },
         {
             "name": "MYSQL_PASSWORD",
@@ -1123,7 +1123,7 @@ $ cat php-mysql-template.json
             "name": "MYSQL_USER",
             "displayName": "Database User",
             "generate": "expression",
-            "from": "[a-zA-Z0-9]{40}"
+            "from": "[a-zA-Z0-9]{16}"
         },
         {
             "name": "MYSQL_PASSWORD",
