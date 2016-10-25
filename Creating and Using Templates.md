@@ -641,6 +641,8 @@ To declare these parameters in a template, we will add the parameters section as
 `generate` allows you to auto-generate the values if no value is keyed in by the user
 `from` defines the range of values allowed
 
+**Note** Sometimes length of the parameter may be important. As an example, we have set the MYSQL_USER to be 16 characters during autogeneration, due to technology limitations.
+
 Remove "namespace" parameter from the DeploymentConfig here as you want your template to be usable in any project
 
 ```
