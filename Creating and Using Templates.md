@@ -641,6 +641,19 @@ To declare these parameters in a template, we will add the parameters section as
 `generate` allows you to auto-generate the values if no value is keyed in by the user
 `from` defines the range of values allowed
 
+Remove "namespace" parameter from the DeploymentConfig here as you want your template to be usable in any project
+
+```
+"triggers": [
+ ..
+                        "type": "ImageChange",
+                        "imageChangeParams": {
+..
+                            "from": {
+                                "kind": "ImageStreamTag",
+                                "namespace": "templatize",
+                                "name": "${APPLICATION_NAME}:latest"
+```
 
 Also remove the `status` sections as they represent the result of processing each of the objects. We don't need them in a template. As an example remove the sections that start with `status`; usually this is the last section in each object. So when you remove make sure that the **comma before this object is also removed**. 
 
@@ -658,7 +671,7 @@ Also remove the `status` sections as they represent the result of processing eac
 
 The resultant template after the edits would be as under. 
 
-**Take your time** and do it slow as you don't want to mix up this json.
+**Take your time** and do it slow as you don't want to mix up this json. **Also note** that your json files may be slightly different from the ones you see below; don't worry, just focus on the changes we are making to parameterize and you should be ok.
 
 ```
 $ cat php-mysql-template.json 
@@ -794,7 +807,6 @@ $ cat php-mysql-template.json
                             ],
                             "from": {
                                 "kind": "ImageStreamTag",
-                                "namespace": "templatize",
                                 "name": "${APPLICATION_NAME}:latest"
                             }
                         }
