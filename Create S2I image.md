@@ -222,7 +222,7 @@ LABEL io.k8s.description="Platform for serving static html pages" \
 
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
-RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm && \
+RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum install -y lighttpd && \
 # clean yum cache files, as they are not needed and will only make the image bigger in the end
     yum clean all -y
