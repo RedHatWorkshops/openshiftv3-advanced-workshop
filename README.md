@@ -4,4 +4,3 @@ This workshop is meant for advanced users who are already familiar with basic co
 
 1. [Creating and Using Templates](./Creating%20and%20Using%20Templates.md)
 2. [Creating your own S2I builder](./Create%20S2I%20image.md)
-
