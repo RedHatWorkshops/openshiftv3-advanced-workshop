@@ -2,7 +2,7 @@
 
 In this lab we will learn to create a template and use the same. We will use a two tiered application example to create a template out of it.
 
-####Step 1: Add a new project
+#### Step 1: Add a new project
 
 Let us add a new project with name `templatize-UserName`. **Remember** to substitute the username.
 
@@ -10,7 +10,7 @@ Let us add a new project with name `templatize-UserName`. **Remember** to substi
 oc new-project templatize-UserName
 ```
 
-####Step 2: Create a two tiered application
+#### Step 2: Create a two tiered application
 
 We will use the same example as in the [Using Templates](https://github.com/RedHatWorkshops/openshiftv3-workshop/blob/master/5.%20Using%20templates.md) lab before. However here we will do it quickly from the commmand line.
 
